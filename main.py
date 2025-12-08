@@ -15,9 +15,6 @@ drawable = pygame.sprite.Group()
 Player.containers = (updatable, drawable)
 player = Player(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
 
-
-
-
 while True:
     log_state()
     for event in pygame.event.get():
@@ -34,7 +31,7 @@ while True:
 def main():
     print(f"Starting Asteroids with pygame version: {pygame.version.ver}")
     print(f"Screen width: {SCREEN_WIDTH}\nScreen height: {SCREEN_HEIGHT}")
-    
+
 
 
 
