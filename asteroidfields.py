@@ -1,4 +1,5 @@
 import random
+from typing import ClassVar
 
 import pygame
 
@@ -14,6 +15,8 @@ from constants import (
 
 
 class AsteroidField(pygame.sprite.Sprite):
+    containers: ClassVar[tuple] = ()
+
     edges = [
         [
             pygame.Vector2(1, 0),

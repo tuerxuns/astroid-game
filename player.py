@@ -1,4 +1,5 @@
-from ast import Continue
+from typing import ClassVar
+
 import pygame
 
 from circleshape import CircleShape
@@ -14,6 +15,8 @@ from shot import Shot
 
 
 class Player(CircleShape):
+    containers: ClassVar[tuple] = ()
+
     def __init__(self, x, y):
         super().__init__(x, y, PLAYER_RADIUS)
         self.rotation = 0
@@ -51,7 +54,7 @@ class Player(CircleShape):
             else:
                 self.shoot()
                 self.shot_cooldown = PLAYER_SHOOT_COOLDOWN
-            
+
 
     def move(self, dt):
         unit_vector = pygame.Vector2(0, 1)
@@ -63,5 +66,3 @@ class Player(CircleShape):
         shot = Shot(self.position.x, self.position.y)
         shot.velocity = pygame.Vector2(0,1).rotate(self.rotation)
         shot.velocity *= PLAYER_SHOOT_SPEED
-         
-
