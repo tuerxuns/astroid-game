@@ -10,5 +10,6 @@ game_events.jsonl
 uv.lock
 pyproject.toml
 .python-version
+.DS_Store
 # Virtual environments
 .venv
